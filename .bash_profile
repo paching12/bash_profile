@@ -61,7 +61,7 @@ function delete_files()	{
 	find . -name '.DS_Store' -type f -delete
 }	#end delete_files
 
-function download_git_autocomplete() {
+function download_git_autocomplete() {	
 	RED='\033[0;31m'
 	GREEN='\033[0;32m'
 	NC='\033[0m' # No Color
@@ -70,5 +70,7 @@ function download_git_autocomplete() {
 	echo "${GREEN}Descargando...${NC}"
 	wget --tries=2 -P ~/ "${URL}"
 
-	echo "source ~/git-completion.bash" >> ~/.bashrc
+	echo "source ~/git-completion.bash" >> ~/.bash_profile
  }	# end autocomplete
+ 
+source ~/git-completion.bash
